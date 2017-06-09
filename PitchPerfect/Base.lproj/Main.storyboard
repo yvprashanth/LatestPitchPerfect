@@ -21,10 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2f-ua-qZc">
-                                <rect key="frame" x="163" y="318.5" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2f-ua-qZc">
+                                <rect key="frame" x="110" y="256.5" width="155" height="155"/>
                                 <color key="backgroundColor" red="0.48312122530000001" green="0.4995890858" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Record">
+                                <state key="normal" image="Record">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -32,13 +32,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJG-g4-jqr">
-                                <rect key="frame" x="134.5" y="356.5" width="107" height="21"/>
+                                <rect key="frame" x="134.5" y="419.5" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEd-99-7Sw">
-                                <rect key="frame" x="134.5" y="385.5" width="106" height="30"/>
+                                <rect key="frame" x="134.5" y="448.5" width="106" height="30"/>
                                 <state key="normal" title="Stop Recording"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hzg-2Y-vj6"/>
@@ -64,4 +64,7 @@
             <point key="canvasLocation" x="139" y="136"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Record" width="155" height="155"/>
+    </resources>
 </document>
