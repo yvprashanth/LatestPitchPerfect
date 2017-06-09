@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func recordAudio(sender: UIButton) {
-        print(sender.currentTitle)
+    @IBAction func recordAudio(_ sender: UIButton) {
+        print(sender.currentTitle!)
         recordingLabel.text = "Recording in progress"
     }
     
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func stopRecording(sender: UIButton) {
+    @IBAction func stopRecording(_ sender: UIButton) {
         print("Stop Recording")
         recordingLabel.text = "Stopped recording"
     }
