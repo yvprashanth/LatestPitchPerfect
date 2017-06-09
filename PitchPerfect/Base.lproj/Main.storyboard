@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,34 +38,40 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEd-99-7Sw">
-                                <rect key="frame" x="134.5" y="448.5" width="106" height="30"/>
-                                <state key="normal" title="Stop Recording"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvx-Mr-UfZ">
+                                <rect key="frame" x="149" y="456" width="77" height="74"/>
+                                <state key="normal" image="Stop"/>
                                 <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hzg-2Y-vj6"/>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Un6-a4-whG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GEd-99-7Sw" firstAttribute="centerX" secondItem="WJG-g4-jqr" secondAttribute="centerX" id="HZS-fZ-ZaX"/>
+                            <constraint firstItem="Vvx-Mr-UfZ" firstAttribute="top" secondItem="W2f-ua-qZc" secondAttribute="bottom" constant="44.5" id="7fy-8d-J72"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vvx-Mr-UfZ" secondAttribute="trailing" constant="133" id="9ON-67-4aS"/>
                             <constraint firstItem="WJG-g4-jqr" firstAttribute="centerX" secondItem="W2f-ua-qZc" secondAttribute="centerX" id="S0a-Gy-f3F"/>
-                            <constraint firstItem="GEd-99-7Sw" firstAttribute="top" secondItem="WJG-g4-jqr" secondAttribute="bottom" constant="8" id="bNx-nz-GGB"/>
                             <constraint firstItem="W2f-ua-qZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bjG-gd-Jo5"/>
                             <constraint firstItem="W2f-ua-qZc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gS1-MB-Ku1"/>
+                            <constraint firstItem="Vvx-Mr-UfZ" firstAttribute="top" secondItem="WJG-g4-jqr" secondAttribute="bottom" constant="15.5" id="gsm-Jw-tNs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vvx-Mr-UfZ" secondAttribute="bottom" constant="137" id="mTZ-d6-fHQ"/>
+                            <constraint firstItem="Vvx-Mr-UfZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="133" id="o20-b3-B8H"/>
                             <constraint firstItem="WJG-g4-jqr" firstAttribute="top" secondItem="W2f-ua-qZc" secondAttribute="bottom" constant="8" id="qIK-yY-SxS"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="recordAudioButton" destination="W2f-ua-qZc" id="ZzQ-5k-9fC"/>
                         <outlet property="recordingLabel" destination="WJG-g4-jqr" id="CBw-Ko-cXB"/>
+                        <outlet property="stopRecordButton" destination="Vvx-Mr-UfZ" id="y3e-Ys-fEu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="136"/>
+            <point key="canvasLocation" x="138.40000000000001" y="135.38230884557723"/>
         </scene>
     </scenes>
     <resources>
         <image name="Record" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
     </resources>
 </document>
