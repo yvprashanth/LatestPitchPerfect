@@ -70,18 +70,43 @@
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="135.38230884557723"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="HNS-J4-qMx">
             <objects>
-                <viewController id="RuR-dD-SHS" sceneMemberID="viewController">
+                <viewController id="RuR-dD-SHS" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zju-Qw-Idz"/>
                         <viewControllerLayoutGuide type="bottom" id="lIl-aw-Khl"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="X8U-uS-e4B">
+                    <view key="view" contentMode="scaleToFill" id="X8U-uS-e4B" customClass="PlaySounds">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.10378722900267223" green="0.69484870421534084" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ANl-xh-gh6">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WWF-Eg-2bC">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="603"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTT-WY-hQe" userLabel="Slow Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="603"/>
+                                                <state key="normal" image="Slow"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyK-pr-AuY" userLabel="Fast Button">
+                                                <rect key="frame" x="171.5" y="0.0" width="171.5" height="603"/>
+                                                <state key="normal" image="Fast"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lIl-aw-Khl" firstAttribute="top" secondItem="ANl-xh-gh6" secondAttribute="bottom" id="KLB-s2-gKm"/>
+                            <constraint firstItem="ANl-xh-gh6" firstAttribute="leading" secondItem="X8U-uS-e4B" secondAttribute="leadingMargin" id="PgV-dA-tUR"/>
+                            <constraint firstItem="ANl-xh-gh6" firstAttribute="top" secondItem="zju-Qw-Idz" secondAttribute="bottom" id="Wjv-cp-p8v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ANl-xh-gh6" secondAttribute="trailing" id="fHW-K9-XPt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CxO-ig-KCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -108,7 +133,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Fast" width="90" height="90"/>
         <image name="Record" width="155" height="155"/>
+        <image name="Slow" width="90" height="90"/>
         <image name="Stop" width="155" height="155"/>
     </resources>
 </document>
